@@ -1,0 +1,55 @@
+{% extends "newfeed/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<main role="main" class="container">
+    <div class="row">
+      <div class="col-md-10">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+        </div>
+        <h2 class="article-title">{{ post.title }}</h2>
+        <p class="article-content">{{ post.content }}</p>
+      </div>
+  </article>
+<h4>Comment</h4>
+ <hr  width="100%" size="8px" align="left"  />
+
+{%  for comment_1 in post.comment_1s.all %}
+    <article class="media content-section">
+      <img class="square article-img" src="{{comment_1.author.profile.image.url}}">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a class="mr-2" ">{{ comment_1.author }}</a>
+          <small class="text-muted">{{ comment_1.date|date:"F d, Y" }}</small>
+        </div>
+        <p class="article-content">{{ comment_1.body }}</p>
+      </div>
+  </article>
+  {% endfor %}
+
+{% if user.username%}
+    <form action="{% url 'post_confession' post.id %}" method='POST'>
+        {% csrf_token%}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Comment</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+          <button class="btn btn-outline-info" type="submit">Comment</button>
+        </div>
+    </form>
+{% endif %}
+</div>
+
+ </main>
+{% endblock content %}
+

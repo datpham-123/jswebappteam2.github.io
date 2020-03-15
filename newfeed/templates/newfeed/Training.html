@@ -1,0 +1,90 @@
+{% extends "newfeed/base.html" %}
+
+{% block content %}
+ <!-- Navbar-end -->
+    <!-- Jumbotron -->
+    <div class="card border-0" style="text-align: center;">
+                    <div class="card-header" style="text-align: center;" style="border-width: 0em;">
+                        <h1>Training</h1>
+                    </div>
+                    <div class="card-body">
+    <!-- Jumbotron end -->
+    <!-- Main -->
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+
+                <h3 style="text-align: center;">Lịch Học tuần <span id="stylediv"></span></h3>
+
+                <!-- Table -->
+                <div>
+                    <select id="globalstyleselect" onchange="styleselect()">
+                        <option value="1">Tuần 1</option>
+                        <option value="2">Tuần 2 </option>
+                        <option value="3">Tuần 3</option>
+                    </select>
+                </div>
+                <br>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Slot/ Thứ</th>
+                            <th scope="col">Thứ 2</th>
+                            <th scope="col">Thứ 3</th>
+                            <th scope="col">Thứ 4</th>
+                            <th scope="col">Thứ 5</th>
+                            <th scope="col">Thứ 6</th>
+                            <th scope="col">Thứ 7</th>
+                            <th scope="col">Chủ Nhật</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">5h - 7h30</th>
+                            <td><span id="2s1"></span></td>
+                            <td><span id="3s1"></span></td>
+                            <td><span id="4s1"></span></td>
+                            <td><span id="5s1"></span></td>
+                            <td><span id="6s1"></span></td>
+                            <td><span id="7s1"></span></td>
+                            <td><span id="8s1"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7h30 - 9h</th>
+                            <td><span id="2s2"></span></td>
+                            <td><span id="3s2"></span></td>
+                            <td><span id="4s2"></span></td>
+                            <td><span id="5s2"></span></td>
+                            <td><span id="6s2"></span></td>
+                            <td><span id="7s2"></span></td>
+                            <td><span id="8s2"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9h-10h30</th>
+                            <td><span id="2s3"></span></td>
+                            <td><span id="3s3"></span></td>
+                            <td><span id="4s3"></span></td>
+                            <td><span id="5s3"></span></td>
+                            <td><span id="6s3"></span></td>
+                            <td><span id="7s3"></span></td>
+                            <td><span id="8s3"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Table end -->
+            </div>
+            <div class="col-sm-1"></div>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<!-- footer -->
+{% endblock content %}

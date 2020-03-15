@@ -1,0 +1,24 @@
+{% extends "newfeed/base.html" %}
+
+
+{% block content %}
+<main role="main" class="container">
+    <div class="row">
+      <div class="col-md-10">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+  <h2>Bạn đã đăng xuất</h2>
+  <div class="border-top pt-3">
+    <small class="text-muted">
+      <a href="{% url 'login' %}">Đăng nhập lại</a>
+     </small>
+  </div>
+        </div>
+
+ </main>
+{% endblock content %}
