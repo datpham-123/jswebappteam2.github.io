@@ -2,11 +2,10 @@
 
 ## Our team website using Django for backend and Bootstrap for front-end
 
-### I only handle half back-end, other contribution is for my team
-
 ### link deploy with heroku: https://jsclubfpt.herokuapp.com/ 
 
 team 2:
+- Dat Pham (Back End)
 - Dang Tuan (Back End)
 - Thanh Long (Front End)
 - Khoai Tay (Front End)
