@@ -7,7 +7,7 @@
 team 2:
 - Dat Pham (Back End)
 - Dang Tuan (Back End)
-- Thanh Long (Front End)
+- Thanh Long (Front End + Leader)
 - Khoai Tay (Front End)
 - Antonie Nguyen (Front End)
 - Dinh Tuan Anh (Take Care)
